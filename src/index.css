@@ -99,6 +99,11 @@ code {
   gap: var(--gap, 1rem);
 }
 
+/* .flow > * + * {
+  margin-top: 1rem;
+  outline: 1px solid red;
+} */
+
 .container {
   padding: 0 2em;
   max-width: 80rem;

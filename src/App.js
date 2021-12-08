@@ -6,8 +6,9 @@ function App() {
     <div className="App">
     
       <header className="App-header">
+      <p>Space Cowboy</p>
          <Nav />
-         <p>Space Cowboy</p>
+         
       </header>
     </div>
   );

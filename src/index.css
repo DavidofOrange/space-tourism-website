@@ -1,3 +1,12 @@
+/* Custom Colors */
+
+:root {
+  --darkBlue: 230 35% 7%;
+  --lightBlue: 231 77% 90%;
+  --white: 0 0% 100%;
+
+}
+
 /* reset */
 
 *, 
@@ -86,3 +95,13 @@ code {
   white-space: nowrap;
   border: 0;
 }
+
+/* colors */
+
+.bg-dark-blue { background-color: hsl(var(--darkBlue));}
+.bg-light-blue { background-color: hsl(var(--lightBlue));}
+.bg-white { background-color: hsl(var(--white));}
+
+.font-dark-blue { color: hsl(var(--darkBlue));}
+.font-light-blue { color: hsl(var(--lightBlue));}
+.font-white { color: hsl(var(--white));}

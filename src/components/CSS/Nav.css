@@ -1,3 +1,8 @@
-.nav-bar {
+.nav-bar ul li a {
     gap: 5rem;
+    color: white;
+}
+
+li {
+    text-decoration: none;
 }

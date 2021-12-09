@@ -100,7 +100,7 @@ code {
 }
 
 /* .flow > * + * {
-  margin-top: 1rem;
+  margin-top: var(--flow-space, 1rem);
   outline: 1px solid red;
 } */
 

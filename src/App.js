@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import './App.css';
 import Nav from './components/Nav';
 import Home from './components/Home';
 import Destination from './components/Destination';
@@ -12,7 +11,6 @@ import Technology from './components/Technology';
 function App() {
   return (
     <BrowserRouter>
-        <Nav />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/destination' element={<Destination />} />

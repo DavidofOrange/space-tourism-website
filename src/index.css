@@ -29,46 +29,57 @@
 }
 
 /* Custom Colors */
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
 
 :root {
-  /* colors */
-  --darkBlue: 230 35% 7%;
-  --lightBlue: 231 77% 90%;
-  --white: 0 0% 100%;
-   /* font-sizes */
-   --fs-900: 9.375rem;
-   --fs-800: 6.25rem;
-   --fs-700: 3.5rem;
-   --fs-600: 2rem;
-   --fs-500: 1.75rem;
-   --fs-400: 1.125rem;
-   --fs-300: 1rem;
-   --fs-200: 0.875rem;
-   
-   /* font-families */
-   --ff-serif: "Bellefair", serif;
-   --ff-sans-cond: "Barlow Condensed", sans-serif;
-   --ff-sans-normal: "Barlow", sans-serif;
+    /* colors */
+    --clr-dark: 230 35% 7%;
+    --clr-light: 231 77% 90%;
+    --clr-white: 0 0% 100%;
+    
+    /* font-sizes */
+    --fs-900: 9.375rem;
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.125rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+    
+    /* font-families */
+    --ff-serif: "Bellefair", serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Barlow", sans-serif;
 }
 
-/* reset */
 
-*, 
-*::before, 
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-body, 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-p, 
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
 figure,
 picture {
-  margin: 0;
+    margin: 0; 
 }
 
 h1,
@@ -81,12 +92,24 @@ p {
     font-weight: 400;
 }
 
+/* set up the body */
+body {
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-400);
+    color: hsl( var(--clr-white) );
+    background-color: hsl( var(--clr-dark) );
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* make images easier to work with */
 img,
 picture {
     max-width: 100%;
     display: block;
 }
 
+/* make form elements easier to work with */
 input,
 button,
 textarea,
@@ -94,6 +117,7 @@ select {
     font: inherit;
 }
 
+/* remove animations for people who've turned them off */
 @media (prefers-reduced-motion: reduce) {  
   *,
   *::before,
@@ -105,55 +129,69 @@ select {
   }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
-/* Utility Classes */
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* general */
 
 .flex {
-  display: flex;
-  gap: var(--gap, 1rem);
+    display: flex;
+    gap: var(--gap, 1rem);
 }
 
 .grid {
-  display: grid;
-  gap: var(--gap, 1rem);
+    display: grid;
+    gap: var(--gap, 1rem);
 }
 
-.flow > * + * {
-  margin-top: var(--flow-space, 1rem);
-  outline: 1px solid red;
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
 }
 
 .container {
-  padding-inline: 2em;
-  max-width: 80rem;
-  margin-inline: auto;
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 80rem;
 }
 
+.grid-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 2em repeat(2, minmax(0, 40rem)) 2em;
+}
+
+.grid-container > *:first-child {
+    grid-column: 2;
+}
+
+.grid-container > *:last-child {
+    grid-column: 3;
+}
+
+
 .sr-only {
-  position: absolute;
+  position: absolute; 
   width: 1px;
   height: 1px;
   padding: 0;
-  margin: -1px;
+  margin: -1px; 
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
+  white-space: nowrap; /* added line */
   border: 0;
 }
 
 /* colors */
 
-.bg-dark-blue { background-color: hsl(var(--darkBlue));}
-.bg-light-blue { background-color: hsl(var(--lightBlue));}
-.bg-white { background-color: hsl(var(--white));}
+.bg-dark { background-color: hsl( var(--clr-dark) );}
+.bg-accent { background-color: hsl( var(--clr-light) );}
+.bg-white { background-color: hsl( var(--clr-white) );}
 
-.font-dark-blue { color: hsl(var(--darkBlue));}
-.font-light-blue { color: hsl(var(--lightBlue));}
-.font-white { color: hsl(var(--white));}
+.text-dark { color: hsl( var(--clr-dark) );}
+.text-accent { color: hsl( var(--clr-light) );}
+.text-white { color: hsl( var(--clr-white) );}
 
 /* typography */
 
@@ -210,7 +248,6 @@ code {
     border-radius: 50%;
     aspect-ratio: 1;
     text-decoration: none;
-    color: black;
 }
 
 .large-button::after {
@@ -286,8 +323,6 @@ code {
 .dot-indicators > [aria-selected="true"] {
     background-color: hsl( var(--clr-white) / 1); 
 }
-
-
 
 
 

@@ -8,8 +8,8 @@ import { NavLink } from 'react-router-dom';
 function Nav() {
     return (
       <>
-      <header className='primary-header'>
-        <div className='main-logo' alt='main-logo'>
+      <header className='primary-header flex'>
+        <div className='logo' alt='main-logo'>
           <Link to='/'><img src={ logo } alt='main-logo'></img></Link>
         </div>
         <nav className='flex'>

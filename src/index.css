@@ -1,28 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
 
-
 .home {
-  background: url('./starter-code/assets/home/background-home-mobile.jpg'); 
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh; 
-}
-
-@media only screen and (min-width: 768px) {
-  .home {
-    background: url('./starter-code/assets/home/background-home-tablet.jpg'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .home {
-    background: url('./starter-code/assets/home/background-home-desktop.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+    height: 100vh;
 }
 /* ------------------- */
 /* Custom properties   */
@@ -50,9 +29,8 @@
     --ff-sans-normal: "Barlow", sans-serif;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 768px) {
     :root {
-        --fs-900: 9.375rem;
         --fs-800: 5rem;
         --fs-700: 2.5rem;
         --fs-600: 1.5rem;
@@ -60,7 +38,7 @@
     }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 1280) {
     :root {
         /* font-sizes */
         --fs-800: 6.25rem;
@@ -163,6 +141,10 @@ select {
     gap: var(--gap, 1rem);
 }
 
+.display-block {
+    display: block;
+}
+
 .flow > *:where(:not(:first-child)) {
     margin-top: var(--flow-space, 1rem);
 }
@@ -174,29 +156,51 @@ select {
 }
 
 .grid-container {
+    text-align: center;
     border: 5px solid limegreen;
     display: grid;
+    place-items: center;
+    padding-inline: 1rem;
+
 }
 
-@media (min-width: 45em) {
+.grid-container * {
+    max-width: 50ch;
+}
+
+@media (min-width: 1280px) {
     .grid-container {
+        text-align: left;
         column-gap: var(--container-gap, 2rem);
-        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
     }
     
     .grid-container > *:first-child {
+        margin: 300px 0 0 200px;
+        margin-right: 300px;
         grid-column: 2;
         outline: 1px solid red;
     }
 
     .grid-container > *:last-child {
+        Margin-left: 400px;
         grid-column: 3;
         outline: 1px solid yellow;
     }
+    
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
+    }
 }
 
+.grid-container > *:first-child {
+        outline: 1px solid red;
+    }
 
-
+    .grid-container > *:last-child {
+        outline: 1px solid yellow;
+    }
 
 .sr-only {
   position: absolute; 
@@ -206,7 +210,7 @@ select {
   margin: -1px; 
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  white-space: nowrap; /* added line */
+  white-space: nowrap; 
   border: 0;
 }
 
@@ -267,6 +271,7 @@ select {
 /* ------------------- */
 
 .large-button {
+    font-size: 2rem;
     position: relative;
     z-index: 1;
     display: inline-grid;
@@ -296,11 +301,28 @@ select {
 }
 
 .primary-navigation {
-    --gap: 8rem;
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .primary-navigation {
+        --underline-gap: .8rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+        position: fixed;
+        background: maroon;
+        inset: 0 0 0 20%;
+        z-index: 99999;
+        padding: min(20rem, 15vh) 2rem;
+    }
+    .primary-navigation.underline-indicators > .active {
+        border: 0;
+    }
 }
 
 .primary-navigation a {
@@ -350,6 +372,39 @@ select {
 .dot-indicators > [aria-selected="true"] {
     background-color: hsl( var(--clr-white) / 1); 
 }
+
+/* ------------------- */
+/* Page specific       */
+/* ------------------- */
+
+
+
+/* home */
+
+.home {
+    background: url('./starter-code/assets/home/background-home-mobile.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .home {
+      background: url('./starter-code/assets/home/background-home-tablet.jpg'); 
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+    }
+  }
+  
+  @media only screen and (min-width: 1280px) {
+    .home {
+      background: url('./starter-code/assets/home/background-home-desktop.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
 
 /*
 @media (prefers-reduced-motion: no-preference) {

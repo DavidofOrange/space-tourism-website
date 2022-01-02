@@ -5,13 +5,18 @@ import logo from '../starter-code/assets/shared/logo.svg';
 
 
 function Nav() {
+  const handleClick = () => {
+    const nav = document.getElementById('nav-bar');
+    nav.classList.toggle('open');
+  }
     return (
       <>
       <header className='primary-header flex'>
-        <div className='logo' alt='main-logo'>
-          <Link to='/'><img src={ logo } alt='main-logo'></img></Link>
+        <div >
+          <Link className='logo' to='/'><img src={ logo } alt='main-logo'></img></Link>
         </div>
-        <nav className='flex'>
+        <button id='nav-menu' onClick={handleClick}><span className='sr-only'>Menu</span></button>
+        <nav id='nav-bar'>
           <ul className='primary-navigation underline-indicators flex'>
             <li className='active'><Link className='ff-sans-cond uppercase text-white letter-spacing-2' 
             to='/'><span>00 Home</span></Link></li>

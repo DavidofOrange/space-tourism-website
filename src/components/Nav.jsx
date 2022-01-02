@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../index.css';
 import logo from '../starter-code/assets/shared/logo.svg';
-import { NavLink } from 'react-router-dom';
 
 
 function Nav() {

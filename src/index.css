@@ -332,6 +332,9 @@ select {
         padding: min(20rem, 15vh) 2rem;
         transform: translateX(100%);
     }
+    .primary-navigation[data-visible='true'] {
+        transform: translateX(0);
+    }
     #nav-menu {
         display: block;
         position: absolute;

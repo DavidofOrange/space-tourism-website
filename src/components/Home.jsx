@@ -5,9 +5,10 @@ import Nav from './Nav.jsx';
 
 export default function Home() {
     return (
+      <>
         <section className='home'>
         <Nav />
-          <div className='grid-container grid-container--home'>
+          <main className='grid grid-container grid-container--home'>
             <div>
               <h1 className='text-accent fs-500 ff-sans-cond uppercase letter-spacing-1'>
                 So, you want to travel to  
@@ -23,8 +24,8 @@ export default function Home() {
                   Explore
                 </Link>
             </div>
-          </div>
+          </main>
         </section>
-
+    </>
     )
 }

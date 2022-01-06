@@ -89,7 +89,7 @@ body {
     font-size: var(--fs-400);
     color: hsl( var(--clr-white) );
     background-color: hsl( var(--clr-dark) );
-    line-height: 1.5;
+    line-height: 2;
     min-height: 100vh;
     display: grid;
     grid-template-rows: min-content 1fr;
@@ -132,20 +132,20 @@ select {
 
 .flex {
     display: flex;
-    gap: var(--gap, 1rem);
+    gap: 1rem;
 }
 
 .grid {
     display: grid;
-    gap: var(--gap, 1rem);
+    gap:  1rem;
 }
 
 .display-block {
     display: block;
 }
 
-.flow > *:where(:not(:first-child)) {
-    margin-top: var(--flow-space, 1rem);
+.flow {
+    margin-top: 1rem;
 }
 
 .container {
@@ -174,7 +174,7 @@ select {
     }
     
     .grid-container > *:first-child {
-        margin-top: 300px;
+        margin-top: 10rem;
         grid-column: 2;
     }
 
@@ -198,6 +198,10 @@ select {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; 
   border: 0;
+}
+
+.transparent {
+    background-color: transparent;
 }
 
 /* colors */
@@ -468,8 +472,8 @@ select {
   }
 
 .planet-image {
-    width: 300px;
-    height: 300px;
+    width: 22rem;
+    height: 22rem;
 }
 .planet-image[data='0'] {
     background: url('./starter-code/assets/destination/image-moon.png') no-repeat center/cover;

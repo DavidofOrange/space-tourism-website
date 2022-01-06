@@ -21,29 +21,36 @@ export default function Destination() {
           <Nav />
             <main className='grid-container grid-container--home'> 
               <article>         
-                <h1><span>01</span> Pick your destination</h1>
+                <h1 className='numbered-title'><span>01</span> Pick your destination</h1>
                 <div className='planet-image' data={index}>
                 </div>
               </article>
 
-              <div>
-                <nav>
-                  <ul>
+              <article>
+                <div>
+                  <div className='tab-list underline-indicators flex'>
                     {destination.map((planet, index) => (
-                      <button key={index} onClick={() =>
-                        setIndex(index)}>
-                        <li>{planet.name}</li>
+                      <button className='transparent uppercase ff-sans-cond text-accent letter-spacing-2' 
+                        key={index} onClick={() =>
+                          setIndex(index)}>
+                          {planet.name}
                       </button>
                     ))}
-                  </ul>
-                </nav>
-                <h2>{name}</h2>
+                  </div>
+                </div>
+                <h2 className='fs-800 uppercase ff-serif'>{name}</h2>
                 <p>{description}</p>
-                <ul>
-                  <li>Avg. distance {distance}</li>
-                  <li>Est. travel time {travel}</li>
-                </ul>
-              </div>
+                <div className='flex'>
+                    <div>
+                      <h3 className='text-accent fs-200 uppercase'>Avg. distance</h3>
+                      <p className='fs-500 ff-serif uppercase'>{distance}</p>
+                    </div>
+                    <div>
+                      <h3 className='text-accent fs-200 uppercase'>Est. travel time</h3>
+                      <p className='fs-500 ff-serif uppercase'>{travel}</p>
+                    </div>
+                </div>
+              </article>
              </main> 
            </section>
         </>

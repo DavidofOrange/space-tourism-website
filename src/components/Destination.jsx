@@ -21,7 +21,7 @@ export default function Destination() {
             <main className='grid-container grid-container--home'> 
               <article>         
                 <h1 className='numbered-title'><span>01</span> Pick your destination</h1>
-                <div className='planet-image' data={index}>
+                <div className='planet-image flow' data={index}>
                 </div>
               </article>
 

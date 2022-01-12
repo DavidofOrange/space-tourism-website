@@ -487,14 +487,16 @@ select {
 .planet-image[data='3'] {
     background: url('./starter-code/assets/destination/image-titan.png') no-repeat center/cover;
 }
-/* use this code to animate planets
+
+
+/* use this code to animate planets*/
 
 @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      animation: App-logo-spin infinite 20s linear;
+    .planet-image {
+      animation: planet-image-spin infinite 20s linear;
     }
   }
-  @keyframes App-logo-spin {
+  @keyframes planet-image-spin {
     from {
       transform: rotate(0deg);
     }
@@ -502,4 +504,4 @@ select {
       transform: rotate(360deg);
     }
   }
-  */
+  

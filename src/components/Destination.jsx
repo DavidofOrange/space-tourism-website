@@ -14,7 +14,6 @@ export default function Destination() {
   const {name, images, description, distance, travel} = destination[index];
   const image = images.png;
   
-  console.log(index)
     return (
         <>
           <section className='destination'>

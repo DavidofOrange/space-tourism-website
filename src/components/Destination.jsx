@@ -2,10 +2,6 @@ import Nav from './Nav';
 import '../index.css';
 import { React, useState } from 'react';
 import data from '../starter-code/data.json';
-import moon from '../starter-code/assets/destination/image-moon.png';
-import mars from '../starter-code/assets/destination/image-mars.png';
-import europa from '../starter-code/assets/destination/image-europa.png';
-import titan from '../starter-code/assets/destination/image-titan.png';
 
 
 export default function Destination() {
@@ -37,16 +33,16 @@ export default function Destination() {
                     ))}
                   </div>
                 </div>
-                <h2 className='fs-800 uppercase ff-serif'>{name}</h2>
-                <p>{description}</p>
-                <div className='flex'>
-                    <div>
+                <h2 className='fs-800 uppercase ff-serif flow'>{name}</h2>
+                <p className='flow'>{description}</p>
+                <div className='flex flow'>
+                    <div > 
                       <h3 className='text-accent fs-200 uppercase'>Avg. distance</h3>
-                      <p className='fs-500 ff-serif uppercase'>{distance}</p>
+                      <p className='fs-400 ff-serif uppercase'>{distance}</p>
                     </div>
                     <div>
                       <h3 className='text-accent fs-200 uppercase'>Est. travel time</h3>
-                      <p className='fs-500 ff-serif uppercase'>{travel}</p>
+                      <p className='fs-400 ff-serif uppercase'>{travel}</p>
                     </div>
                 </div>
               </article>

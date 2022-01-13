@@ -16,7 +16,7 @@
     --fs-800: 3.5rem;
     --fs-700: 1.5rem;
     --fs-600: 1rem;
-    --fs-500: 1.75rem;
+    --fs-500: 1.25rem;
     --fs-400: 0.9375rem;
     --fs-300: 1rem;
     --fs-200: 0.875rem;
@@ -123,12 +123,7 @@ select {
   }
 }
 
-
-/* ------------------- */
 /* Utility classes     */
-/* ------------------- */
-
-/* general */
 
 .flex {
     display: flex;
@@ -256,9 +251,7 @@ select {
 }
 
 
-/* ------------------- */
-/* Components         */
-/* ------------------- */
+/* Components */
 
 .large-button {
     font-size: 2rem;
@@ -435,11 +428,6 @@ select {
     background-color: hsl( var(--clr-white) / 1); 
 }
 
-/* ------------------- */
-/* Page specific       */
-/* ------------------- */
-
-
 
 /* Background images */
 
@@ -462,12 +450,12 @@ select {
     }
   }
   
-  @media only screen and (min-width: 1200px) {
-    .home {
-      background: url('./starter-code/assets/home/background-home-desktop.jpg') no-repeat center/cover;
+@media only screen and (min-width: 1200px) {
+  .home {
+    background: url('./starter-code/assets/home/background-home-desktop.jpg') no-repeat center/cover;
     }
-    .destination {
-        background: url('./starter-code/assets/destination/background-destination-desktop.jpg') no-repeat center/cover; 
+  .destination {
+    background: url('./starter-code/assets/destination/background-destination-desktop.jpg') no-repeat center/cover; 
       }
   }
 

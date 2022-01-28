@@ -10,7 +10,7 @@ export default function Home() {
         <Nav />
           <main className='grid-container grid-container--home'>
             <div>
-              <h1 className='text-accent fs-500 ff-sans-cond uppercase letter-spacing-1'>
+              <h1 className='text-accent fs-500 ff-sans-cond uppercase letter-spacing-1 flow'>
                 So, you want to travel to  
               <span className='fs-900 ff-serif text-white display-block flow'>Space</span></h1>
               <p className='text-accent fs-500 ff-sans-cond flow'>

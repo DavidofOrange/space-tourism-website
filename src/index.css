@@ -12,7 +12,7 @@
     --clr-white: 0 0% 100%;
     
     /* font-sizes */
-    --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+    --fs-900: clamp(4rem, 8vw + 1rem, 9.375rem);
     --fs-800: 3.5rem;
     --fs-700: 1.5rem;
     --fs-600: 1rem;
@@ -147,40 +147,6 @@ select {
     padding-inline: 2em;
     margin-inline: auto;
     max-width: 80rem;
-}
-
-.grid-container {
-    text-align: center;
-    display: grid;
-    place-items: center;
-    padding-inline: 1rem;
-
-}
-
-.grid-container * {
-    max-width: 50ch;
-}
-
-@media (min-width: 1200px) {
-    .grid-container {
-        text-align: left;
-        column-gap: var(--container-gap, -3rem);
-        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 60rem)) minmax(1rem, 1fr);
-    }
-    
-    .grid-container > *:first-child {
-        margin-top: 10rem;
-        grid-column: 2;
-    }
-
-    .grid-container > *:last-child {
-        grid-column: 3;
-    }
-    
-    .grid-container--home {
-        padding-bottom: max(6rem, 20vh);
-        align-items: end;
-    }
 }
 
 .sr-only {
@@ -429,6 +395,126 @@ select {
 }
 
 
+/* sections */
+
+/* Destination section */
+
+.grid-container--destination {
+    grid-template-areas: 
+        "title"
+        "image"
+        "tabs"
+        "content";
+}
+
+.numbered-title {
+    grid-area: title;
+}
+
+.planet-image {
+    grid-area: image;
+    background: 100% 100%; 
+    width: 14rem;
+    height: 14rem;
+  
+}
+
+.tab-list {
+    grid-area: tabs;
+}
+
+.destination-info {
+    grid-area: content;
+}
+
+.destination-data {
+    flex-direction: column;
+    border-top: 1px solid hsl(var(--clr-white) /.1);
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+.grid-container {
+    text-align: center;
+    display: grid;
+    place-items: center;
+    padding-inline: 1rem;
+    padding-bottom: 3rem;
+}
+
+.grid-container p:not([className]) {
+    max-width: 50ch;
+}
+
+.destination-data p {
+    font-size: 1.5rem;
+}
+
+@media (min-width: 700px) {
+    .numbered-title {
+        justify-self: start;
+        margin-top: 2rem;
+    }
+    .destination-data {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .numbered-title--destination {
+        padding-left: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid-container {
+        text-align: left;
+        column-gap: var(--container-gap, -1rem);
+        grid-template-columns: minmax(3rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
+    }
+    .grid-container--home > *:first-child {
+        grid-column: 2;
+    }
+    .grid-container--home > *:last-child {
+        grid-column: 3;
+    }
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
+    }
+    /* Destination */
+    .planet-image {
+        background: 100% auto;
+        width: 22rem;
+        height: 22rem;
+        justify-items: end;
+    }
+    .grid-container--destination {
+        grid-template-areas: 
+            '. title title .'
+            '. image tabs .'
+            '. image content .';
+        justify-items: start;
+    }
+    .destination-data {
+        gap: min(8vh, 8rem);
+        justify-content: start; 
+    }
+}
+
+
+.planet-image[data='0'] {
+    background: url('./starter-code/assets/destination/image-moon.png') no-repeat center/cover;
+}
+.planet-image[data='1'] {
+    background: url('./starter-code/assets/destination/image-mars.png') no-repeat center/cover; 
+}
+.planet-image[data='2'] {
+    background: url('./starter-code/assets/destination/image-europa.png') no-repeat center/cover;
+}
+.planet-image[data='3'] {
+    background: url('./starter-code/assets/destination/image-titan.png') no-repeat center/cover;
+}
+
+
 /* Background images */
 
 .home {
@@ -459,23 +545,6 @@ select {
       }
   }
 
-.planet-image {
-    width: 22rem;
-    height: 22rem;
-}
-.planet-image[data='0'] {
-    background: url('./starter-code/assets/destination/image-moon.png') no-repeat center/cover;
-}
-.planet-image[data='1'] {
-    background: url('./starter-code/assets/destination/image-mars.png') no-repeat center/cover; 
-}
-.planet-image[data='2'] {
-    background: url('./starter-code/assets/destination/image-europa.png') no-repeat center/cover;
-}
-.planet-image[data='3'] {
-    background: url('./starter-code/assets/destination/image-titan.png') no-repeat center/cover;
-}
-
 
 /* use this code to animate planets*/
 
@@ -492,4 +561,3 @@ select {
       transform: rotate(360deg);
     }
   }
-  

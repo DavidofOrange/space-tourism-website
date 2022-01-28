@@ -6,7 +6,7 @@ import data from '../starter-code/data.json';
 
 export default function Destination() {
   const [destination] = useState(data.destinations);
-  const [index, setIndex] = useState(2);
+  const [index, setIndex] = useState(0);
   const {name, description, distance, travel} = destination[index];
   
     return (

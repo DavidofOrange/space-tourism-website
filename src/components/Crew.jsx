@@ -6,17 +6,22 @@ export default function Crew() {
   const [crew] = useState(data.crew);
   const [index, setIndex] = useState(0);
   const {name, role, bio} = crew[index];
+
     return (
         <>
+        <section className="crew">
           <Nav />
-          <main className="crew">
+          <main >
             <h1 className="numbered-title"><span>02</span> Meet your crew</h1>
             <article className="crew-info ff-serif uppercase">
               <h2 className="fs-600">{role}</h2>
               <h3 className="fs-700">{name}</h3>
               <p>{bio}</p>
             </article>
-            <div className="crew-image" data={index}></div>
+
+            <div className="crew-container-img">
+              <div className="crew-image" data={index}></div>
+            </div>
 
             <div className="flex">
               {crew.map((person, index) => (
@@ -29,6 +34,7 @@ export default function Crew() {
             </div>
 
           </main>
+        </section>
         </>
     )
 }

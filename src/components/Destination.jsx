@@ -1,7 +1,7 @@
 import Nav from './Nav';
 import '../index.css';
 import { React, useState } from 'react';
-import data from '../starter-code/data.json';
+import data from './data.js';
 
 
 export default function Destination() {

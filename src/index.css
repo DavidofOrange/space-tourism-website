@@ -342,13 +342,13 @@ select {
         right: 1rem;
         top: 2rem;
         background: transparent;
-        background: url(./starter-code/assets/shared/icon-hamburger.svg) no-repeat;
+        background: url(./components/assets/shared/icon-hamburger.svg) no-repeat;
         border: 0;
         width: 1.5rem;
         aspect-ratio: 1;
     }
     #nav-menu[aria-expanded='true'] {
-        background: url(./starter-code/assets/shared/icon-close.svg) no-repeat;
+        background: url(./components/assets/shared/icon-close.svg) no-repeat;
     }
     .primary-navigation.underline-indicators > .active {
         border: 0;
@@ -499,40 +499,41 @@ select {
     }
 }
 
+
 /* manually extracted images */
 
 /* destination */
 .planet-image[data='0'] {
-    background: url('./starter-code/assets/destination/image-moon.png') no-repeat center/cover;
+    background: url('./components/assets/destination/image-moon.png') no-repeat center/cover;
 }
 .planet-image[data='1'] {
-    background: url('./starter-code/assets/destination/image-mars.png') no-repeat center/cover; 
+    background: url('./components/assets/destination/image-mars.png') no-repeat center/cover; 
 }
 .planet-image[data='2'] {
-    background: url('./starter-code/assets/destination/image-europa.png') no-repeat center/cover;
+    background: url('./components/assets/destination/image-europa.png') no-repeat center/cover;
 }
 .planet-image[data='3'] {
-    background: url('./starter-code/assets/destination/image-titan.png') no-repeat center/cover;
+    background: url('./components/assets/destination/image-titan.png') no-repeat center/cover;
 }
 
 /* crew */
 .crew-image[data='0'] {
-    background: url('./starter-code/assets/crew/image-douglas-hurley.png') no-repeat center/cover;
+    background: url('./components/assets/crew/image-douglas-hurley.png') no-repeat center/cover;
     width: 26rem;
     height: 36rem;
 }
 .crew-image[data='1'] {
-    background: url('./starter-code/assets/crew/image-mark-shuttleworth.png') no-repeat center/cover; 
+    background: url('./components/assets/crew/image-mark-shuttleworth.png') no-repeat center/cover; 
     width: 25.5rem;
     height: 38rem;
 }
 .crew-image[data='2'] {
-    background: url('./starter-code/assets/crew/image-victor-glover.png') no-repeat center/cover;
+    background: url('./components/assets/crew/image-victor-glover.png') no-repeat center/cover;
     width: 30rem;
     height: 36rem;
 }
 .crew-image[data='3'] {
-    background: url('./starter-code/assets/crew/image-anousheh-ansari.png') no-repeat center/cover;
+    background: url('./components/assets/crew/image-anousheh-ansari.png') no-repeat center/cover;
     width: 30rem;
     height: 32rem;
 }
@@ -540,40 +541,40 @@ select {
 /* Background images */
 
 .home {
-    background: url('./starter-code/assets/home/background-home-mobile.jpg')  no-repeat center/cover;
+    background: url('./components/assets/home/background-home-mobile.jpg')  no-repeat center/cover;
     height: 100vh;
   }
 
 .destination {
-    background: url('./starter-code/assets/destination/background-destination-mobile.jpg') no-repeat center/cover;
+    background: url('./components/assets/destination/background-destination-mobile.jpg') no-repeat center/cover;
     height: 100vh;
   }
 .crew {
-    background: url('./starter-code/assets/crew/background-crew-mobile.jpg') no-repeat center/cover;
+    background: url('./components/assets/crew/background-crew-mobile.jpg') no-repeat center/cover;
     height: 100vh;
 }
 
   @media only screen and (min-width: 700px) {
     .home {
-      background: url('./starter-code/assets/home/background-home-tablet.jpg') no-repeat center/cover;
+      background: url('./components/assets/home/background-home-tablet.jpg') no-repeat center/cover;
     }
     .destination {
-      background: url('./starter-code/assets/destination/background-destination-tablet.jpg') no-repeat center/cover;
+      background: url('./components/assets/destination/background-destination-tablet.jpg') no-repeat center/cover;
     }
     .crew {
-        background: url('./starter-code/assets/crew/background-crew-tablet.jpg') no-repeat center/cover;
+        background: url('./components/assets/crew/background-crew-tablet.jpg') no-repeat center/cover;
     }
   }
   
 @media only screen and (min-width: 1200px) {
     .home {
-        background: url('./starter-code/assets/home/background-home-desktop.jpg') no-repeat center/cover;
+        background: url('./components/assets/home/background-home-desktop.jpg') no-repeat center/cover;
     }
     .destination {
-        background: url('./starter-code/assets/destination/background-destination-desktop.jpg') no-repeat center/cover; 
+        background: url('./components/assets/destination/background-destination-desktop.jpg') no-repeat center/cover; 
     }
     .crew {
-        background: url('./starter-code/assets/crew/background-crew-desktop.jpg') no-repeat center/cover;
+        background: url('./components/assets/crew/background-crew-desktop.jpg') no-repeat center/cover;
     }
   }
 

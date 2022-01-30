@@ -1,11 +1,12 @@
 import Nav from './Nav';
 import { React, useState } from 'react';
-import data from '../starter-code/data.json';
+import data from './data.js';
 
 export default function Crew() {
   const [crew] = useState(data.crew);
   const [index, setIndex] = useState(0);
-  const {name, role, bio} = crew[index];
+  const {name, images, role, bio} = crew[index];
+  const image = images.png;
 
     return (
         <>
@@ -22,7 +23,7 @@ export default function Crew() {
             <div className="crew-container-img">
               <div className="crew-image" data={index}></div>
             </div>
-
+            
             <div className="flex">
               {crew.map((person, index) => (
                 <button className="" 

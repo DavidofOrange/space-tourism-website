@@ -463,6 +463,7 @@ select {
 .crew-image {
     grid-area: image;
     border-bottom: 1px solid gray;
+    margin: 2rem 0;
 }
 
 .dot-indicators {
@@ -545,8 +546,8 @@ select {
 /* crew */
 .crew-image[data='0'] {
     background: url('./components/assets/crew/image-douglas-hurley.png') no-repeat center/cover;
-    width: 26rem;
-    height: 36rem;
+    width: 17rem;
+    height: 23rem;
 }
 .crew-image[data='1'] {
     background: url('./components/assets/crew/image-mark-shuttleworth.png') no-repeat center/cover; 

@@ -12,19 +12,17 @@ export default function Crew() {
         <>
         <section className="crew">
           <Nav />
-          <main >
+          <main className="grid-container grid-container--crew flow">
             <h1 className="numbered-title"><span>02</span> Meet your crew</h1>
-            <article className="crew-info ff-serif uppercase">
-              <h2 className="fs-600">{role}</h2>
-              <h3 className="fs-700">{name}</h3>
-              <p>{bio}</p>
+            <article className="crew-info ff-serif uppercase flow">
+              <h2 className="fs-600 flow">{role}</h2>
+              <h3 className="fs-700 flow">{name}</h3>
+              <p className="flow">{bio}</p>
             </article>
 
-            <div className="crew-container-img">
-              <div className="crew-image" data={index}></div>
-            </div>
-            
-            <div className="flex">
+            <div className="crew-image flow" data={index}></div>
+        
+            <div className="dot-indicators flex flow">
               {crew.map((person, index) => (
                 <button className="" 
                   key={index} onClick={() =>

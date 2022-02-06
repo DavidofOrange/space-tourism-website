@@ -449,6 +449,32 @@ select {
     font-size: 1.5rem;
 }
 
+/* crew */
+
+.grid-container--crew {
+    margin-top: 2rem;
+    grid-template-areas: 
+        'title'
+        'image'
+        'tabs'
+        'content';
+}
+
+.crew-image {
+    grid-area: image;
+    border-bottom: 1px solid gray;
+}
+
+.dot-indicators {
+    grid-area: tabs;
+}
+
+.crew-info {
+    grid-area: content;
+}
+
+
+
 @media (min-width: 700px) {
     .numbered-title {
         justify-self: start;

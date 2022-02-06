@@ -17,8 +17,6 @@ export default function Destination() {
                      
                 <h1 className='numbered-title numbered-title--destination'><span>01</span> Pick your destination</h1>
                 <div className='planet-image flow' data={index}></div>
-              
-
              
               <div className='tab-list underline-indicators flex'>
                 {destination.map((planet, index) => (

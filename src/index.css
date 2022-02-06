@@ -488,6 +488,14 @@ select {
     .numbered-title--destination {
         padding-left: 2rem;
     }
+    /* crew */
+    .grid-container--crew {
+        grid-template-areas: 
+            'title'
+            'content'
+            'tabs'
+            'image';
+    }
 }
 
 @media (min-width: 1200px) {
@@ -523,6 +531,13 @@ select {
     .destination-data {
         gap: min(8vh, 8rem);
         justify-content: start; 
+    }
+    /* crew */
+    .grid-container--crew {
+        grid-template-areas: 
+            '. title title .'
+            '. content image .'
+            '. tabs image .';
     }
 }
 

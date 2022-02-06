@@ -27,7 +27,6 @@ export default function Crew() {
                 <button className="" 
                   key={index} onClick={() =>
                     setIndex(index)}>
-                    
                 </button>
               ))}
             </div>

@@ -497,6 +497,9 @@ select {
             'image';
         padding-bottom: 0;
     }
+    .crew-title {
+        opacity: .6;
+    }
     .crew-info {
         margin-top: 3rem;
     }
@@ -652,6 +655,10 @@ select {
     background: url('./components/assets/crew/background-crew-mobile.jpg') no-repeat center/cover;
     height: 100vh;
 }
+.tech {
+    background: url('./components/assets/technology/background-technology-mobile.jpg') no-repeat center/cover;
+    height: 100vh;
+}
 
   @media only screen and (min-width: 700px) {
     .home {
@@ -662,6 +669,9 @@ select {
     }
     .crew {
         background: url('./components/assets/crew/background-crew-tablet.jpg') no-repeat center/cover;
+    }
+    .tech {
+        background: url('./components/assets/technology/background-technology-tablet.jpg') no-repeat center/cover;
     }
   }
   
@@ -675,10 +685,12 @@ select {
     .crew {
         background: url('./components/assets/crew/background-crew-desktop.jpg') no-repeat center/cover;
     }
+    .tech {
+        background: url('./components/assets/technology/background-technology-desktop.jpg') no-repeat center/cover;
+    }
   }
 
-
-/* use this code to animate planets*/
+/* planet animation */
 
 @media (prefers-reduced-motion: no-preference) {
     .planet-image {

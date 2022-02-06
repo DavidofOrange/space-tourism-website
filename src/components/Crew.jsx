@@ -12,7 +12,7 @@ export default function Crew() {
         <>
         <section className="crew">
           <Nav />
-          <main className="grid-container grid-container--crew flow">
+          <main className="grid-container grid-container--crew">
             <h1 className="numbered-title"><span>02</span> Meet your crew</h1>
             <article className="crew-info ff-serif uppercase flow">
               <h2 className="fs-600 flow">{role}</h2>

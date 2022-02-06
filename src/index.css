@@ -438,7 +438,7 @@ select {
     display: grid;
     place-items: center;
     padding-inline: 1rem;
-    padding-bottom: 3rem;
+   
 }
 
 .grid-container p:not([className]) {
@@ -495,7 +495,20 @@ select {
             'content'
             'tabs'
             'image';
+        padding-bottom: 0;
     }
+    .crew-info {
+        margin-top: 3rem;
+    }
+    .grid-container--crew > .dot-indicators {
+        margin: 1rem 0 2rem 0;
+    }
+    .crew-image {
+        align-self: end;
+        margin: 0;
+        border: none;
+    }
+   
 }
 
 @media (min-width: 1200px) {
@@ -539,6 +552,12 @@ select {
             '. content image .'
             '. tabs image .';
     }
+    .grid-container--crew > .dot-indicators {
+        justify-self: start;
+    }
+    .crew-info {
+        justify-self: start;
+    }
 }
 
 
@@ -578,6 +597,44 @@ select {
     background: url('./components/assets/crew/image-anousheh-ansari.png') no-repeat center/cover;
     width: 22rem;
     height: 23rem;
+}
+
+@media (min-width: 700px) {
+    .crew-image[data='0'] {
+        width: 22.5rem;
+        height: 32.5rem;
+    }
+    .crew-image[data='1'] {
+        width: 22rem;
+        height: 32.5rem;
+    }
+    .crew-image[data='2'] {
+        width: 26.5rem;
+        height: 31rem;
+    }
+    .crew-image[data='3'] {
+        width: 31rem;
+        height: 32.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .crew-image[data='0'] {
+        width: 36.5rem;
+        height: 50.5rem;
+    }
+    .crew-image[data='1'] {
+        width: 34.3rem;
+        height: 50.5rem;
+    }
+    .crew-image[data='2'] {
+        width: 43rem;
+        height: 50.5rem;
+    }
+    .crew-image[data='3'] {
+        width: 48rem;
+        height: 50.5rem;
+    }
 }
 
 /* Background images */

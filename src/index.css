@@ -656,6 +656,22 @@ select {
         width: 48rem;
         height: 50.5rem;
     }
+    /* technology images */
+    .tech-image[data='0'] {
+        background: url('./components/assets/technology/image-launch-vehicle-portrait.jpg') no-repeat center/cover;
+        width: 20rem;
+        height: 20rem;
+    }
+    .tech-image[data='1'] {
+        background: url('./components/assets/technology/image-spaceport-portrait.jpg') no-repeat center/cover;
+        width: 20rem;
+        height: 20rem;
+    }
+    .tech-image[data='2'] {
+        background: url('./components/assets/technology/image-space-capsule-portrait.jpg') no-repeat center/cover;
+        width: 20rem;
+        height: 20rem;
+    }
 }
 
 /* Background images */

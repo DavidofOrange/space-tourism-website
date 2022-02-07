@@ -12,7 +12,7 @@ export default function Technology() {
             <Nav />
             <main className="grid-container--tech"> 
               <h1 className="numbered-title"><span>03</span> SPACE LAUNCH 101</h1>
-              <div className="tech-image"></div>
+              <div className="tech-image" data={index}></div>
               <div className="dot-indicators flex flow">
                 {technology.map((person, index) => (
                   <button 

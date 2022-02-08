@@ -607,17 +607,17 @@ select {
 .tech-image[data='0'] {
     background: url('./components/assets/technology/image-launch-vehicle-landscape.jpg') no-repeat center/cover;
     width: 100%;
-    height: 8rem;
+    height: 25vh;
 }
 .tech-image[data='1'] {
     background: url('./components/assets/technology/image-spaceport-landscape.jpg') no-repeat center/cover;
     width: 100%;
-    height: 8rem;
+    height: 25vh;
 }
 .tech-image[data='2'] {
     background: url('./components/assets/technology/image-space-capsule-landscape.jpg') no-repeat center/cover;
     width: 100%;
-    height: 8rem;
+    height: 25vh;
 }
 
 @media (min-width: 700px) {

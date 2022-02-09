@@ -474,7 +474,52 @@ select {
     grid-area: content;
 }
 
+/* technology */
 
+.grid-container--tech {
+    text-align: center;
+    display: grid;
+    place-items: center;
+    grid-template-areas: 
+    'title'
+    'image'
+    'tabs'
+    'content';
+}
+
+.grid-container--tech > .numbered-title {
+    grid-area: title;
+}
+
+.tech-image {
+    grid-area: image;
+    margin-inline: 0;
+    padding-inline: 0;
+}
+
+.dot-indicators {
+    grid-area: tabs;
+}
+
+.tech-btns {
+    margin-right: 1rem;
+    color: white;
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--clr-dark);
+    border: 1px white solid;
+}
+
+.tech-btns:hover {
+    color: black;
+    background-color: white;
+}
+
+.tech-info {
+    grid-area: content;
+    padding-inline: 1rem;
+}
 
 @media (min-width: 700px) {
     .numbered-title {
@@ -510,6 +555,10 @@ select {
         align-self: end;
         margin: 0;
         border: none;
+    }
+    /* technology */
+    .tech-info {
+        max-width: 52ch;
     }
    
 }
@@ -583,23 +632,23 @@ select {
 /* crew images */
 .crew-image[data='0'] {
     background: url('./components/assets/crew/image-douglas-hurley.png') no-repeat center/cover;
-    width: 17rem;
-    height: 23rem;
+    width: 8.5rem;
+    height: 12rem;
 }
 .crew-image[data='1'] {
     background: url('./components/assets/crew/image-mark-shuttleworth.png') no-repeat center/cover; 
-    width: 15.6rem;
-    height: 23rem;
+    width: 8.1rem;
+    height: 12rem;
 }
 .crew-image[data='2'] {
     background: url('./components/assets/crew/image-victor-glover.png') no-repeat center/cover;
-    width: 19.5rem;
-    height: 23rem;
+    width: 10.2rem;
+    height: 12rem;
 }
 .crew-image[data='3'] {
     background: url('./components/assets/crew/image-anousheh-ansari.png') no-repeat center/cover;
-    width: 22rem;
-    height: 23rem;
+    width: 11.4rem;
+    height: 12rem;
 }
 
 /* technology images */

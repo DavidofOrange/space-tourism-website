@@ -12,21 +12,23 @@ export default function Technology() {
             <Nav />
             <main className="grid-container--tech"> 
               <h1 className="numbered-title"><span>03</span> SPACE LAUNCH 101</h1>
-              <div className="tech-image" data={index}></div>
-              <div className="dot-indicators flex flow">
+              <div className="tech-image flow" data={index}></div> 
+              <div className="flow">
                 {technology.map((person, index) => (
-                  <button 
+                  <button className="tech-btns" 
                     key={index} onClick={() =>
                       setIndex(index)}>{index+1}
                   </button>
                 ))}
               </div>
-
-              <h3>THE TECHNOLOGY...</h3>
-              <h2>{name}</h2>
-              <p>{description}</p>
-
+              <div className="tech-info flow">
+                <h3>THE TECHNOLOGY...</h3>
+                <h2 className="fs-700 flow">{name}</h2>
+                <p className="flow">{description}</p>
+              </div>
             </main>
+
+            
           </section>
         </>
     )

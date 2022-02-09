@@ -20,7 +20,7 @@ export default function Crew() {
 
             <div className="crew-image flow" data={index}></div>
         
-            <div className="dot-indicators flex flow">
+            <div className="dot-indicators flex">
               {crew.map((person, index) => (
                 <button className="" 
                   key={index} onClick={() =>

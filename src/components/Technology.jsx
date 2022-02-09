@@ -13,7 +13,7 @@ export default function Technology() {
             <main className="grid-container--tech"> 
               <h1 className="numbered-title"><span>03</span> SPACE LAUNCH 101</h1>
               <div className="tech-image flow" data={index}></div> 
-              <div className="flow">
+              <div className="btns-container flow">
                 {technology.map((person, index) => (
                   <button className="tech-btns" 
                     key={index} onClick={() =>
@@ -22,9 +22,9 @@ export default function Technology() {
                 ))}
               </div>
               <div className="tech-info flow">
-                <h3>THE TECHNOLOGY...</h3>
-                <h2 className="fs-700 flow">{name}</h2>
-                <p className="flow">{description}</p>
+                <h3 className="text-accent">THE TECHNOLOGY...</h3>
+                <h2 className="fs-700 flow ff-serif uppercase">{name}</h2>
+                <p className="tech-description text-accent">{description}</p>
               </div>
             </main>
 

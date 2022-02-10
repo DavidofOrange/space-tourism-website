@@ -630,7 +630,7 @@ select {
         '. tabs content image ';
     }
     .btns-container {
-        margin-top: 5vh;
+        margin-left: -3rem;
     }
     .tech-btns {
         display: block;
@@ -642,7 +642,7 @@ select {
     }
     .tech-info {
         justify-self: start;
-        line-height: 2;
+       
         text-align: start;
     }
     .tech-description {

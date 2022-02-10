@@ -25,15 +25,24 @@
     --ff-serif: "Bellefair", serif;
     --ff-sans-cond: "Barlow Condensed", sans-serif;
     --ff-sans-normal: "Barlow", sans-serif;
+
+    --ls-sp3: 4.75px; 
+    --ls-sp2: 2.7px;  
+    --ls-sp3: 2.35px;
 }
 
 @media (min-width: 700px) {
     :root {
+    /* fonts */
         --fs-800: 5rem;
         --fs-700: 2.5rem;
         --fs-600: 1.5rem;
-        --fs-500: 1rem;
+        --fs-500: 1.3rem;
         --fs-400: 1rem;
+    /* font spacing */
+        --ls-sp1: 5.75px; 
+        --ls-sp2: 4.7px;  
+        --ls-sp3: 2.35px;
     }
 }
 
@@ -183,9 +192,9 @@ select {
 .ff-sans-cond { font-family: var(--ff-sans-cond); } 
 .ff-sans-normal { font-family: var(--ff-sans-normal); } 
 
-.letter-spacing-1 { letter-spacing: 4.75px; } 
-.letter-spacing-2 { letter-spacing: 2.7px; } 
-.letter-spacing-3 { letter-spacing: 2.35px; } 
+.letter-spacing-1 { letter-spacing: var(--ls-sp1); } 
+.letter-spacing-2 { letter-spacing: var(--ls-sp2); } 
+.letter-spacing-3 { letter-spacing: var(--ls-sp3); } 
 
 .uppercase { text-transform: uppercase; }
 
@@ -231,6 +240,7 @@ select {
     border-radius: 50%;
     aspect-ratio: 1;
     text-decoration: none;
+    margin-top: 3rem;
 }
 
 .large-button::after {
@@ -579,8 +589,8 @@ select {
         grid-column: 3;
     }
     .grid-container--home {
-        padding-bottom: max(6rem, 20vh);
-        align-items: end;
+        margin-top: 5rem;
+      
     }
     /* Destination */
     .planet-image {

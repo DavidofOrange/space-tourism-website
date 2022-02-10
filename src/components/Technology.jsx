@@ -28,7 +28,6 @@ export default function Technology() {
               </div>
             </main>
 
-            
           </section>
         </>
     )

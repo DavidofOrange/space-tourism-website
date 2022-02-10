@@ -22,9 +22,9 @@ export default function Technology() {
                 ))}
               </div>
               <div className="tech-info flow">
-                <h3 className="text-accent">THE TECHNOLOGY...</h3>
+                <h3 className="text-accent letter-spacing-3">THE TECHNOLOGY...</h3>
                 <h2 className="fs-700 flow ff-serif uppercase">{name}</h2>
-                <p className="tech-description text-accent">{description}</p>
+                <p className="tech-description text-accent fs-500 ff-sans-cond flow letter-spacing-3">{description}</p>
               </div>
             </main>
 

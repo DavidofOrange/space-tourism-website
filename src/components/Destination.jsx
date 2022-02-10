@@ -31,15 +31,15 @@ export default function Destination() {
 
               <article className="destination-info">
                 <h2 className='fs-800 uppercase ff-serif flow'>{name}</h2>
-                <p className='flow'>{description}</p>
+                <p className='text-accent fs-500 ff-sans-cond flow letter-spacing-3'>{description}</p>
                 <div className='destination-data flex'>
                     <div> 
                       <h3 className='text-accent fs-200 uppercase'>Avg. distance</h3>
-                      <p className='fs-400 ff-serif uppercase'>{distance}</p>
+                      <p className=' ff-serif uppercase'>{distance}</p>
                     </div>
                     <div>
                       <h3 className='text-accent fs-200 uppercase'>Est. travel time</h3>
-                      <p className='fs-400 ff-serif uppercase'>{travel}</p>
+                      <p className=' ff-serif uppercase'>{travel}</p>
                     </div>
                 </div>
               </article>

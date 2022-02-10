@@ -642,14 +642,13 @@ select {
     }
     .tech-info {
         justify-self: start;
-       
         text-align: start;
     }
     .tech-description {
         margin-top: 2rem;
     }
     .tech-image {
-        margin-top: 10rem;
+        margin-top: 4rem;
         justify-self: end;
     } 
 }
@@ -748,20 +747,20 @@ select {
       
     .crew-image[data='0'] {
         width: 100%;
-        height: 70vh;
+        height: 71vh;
         
     }
     .crew-image[data='1'] {
         width: 100%;
-        height: 70vh;
+        height: 71vh;
     }
     .crew-image[data='2'] {
         width: 100%;
-        height: 70vh;
+        height: 71vh;
     }
     .crew-image[data='3'] {
         width: 100%;
-        height: 70vh;
+        height: 74vh;
     }
     /* technology images */
     .tech-image[data='0'] {

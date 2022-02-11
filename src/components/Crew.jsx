@@ -22,7 +22,7 @@ export default function Crew() {
         
             <div className="dot-indicators flex flow">
               {crew.map((person, index) => (
-                <button className="" 
+                <button
                   key={index} onClick={() =>
                     setIndex(index)}>
                 </button>

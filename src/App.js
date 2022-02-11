@@ -5,8 +5,6 @@ import Destination from './components/Destination';
 import Crew from './components/Crew';
 import Technology from './components/Technology';
 
-
-
 function App() {
   return (
     <BrowserRouter>
@@ -19,5 +17,4 @@ function App() {
     </BrowserRouter>
   );
 }
-
 export default App;

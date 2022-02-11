@@ -15,7 +15,7 @@ export default function Technology() {
               <div className="tech-image flow" data={index}></div> 
               <div className="btns-container flow">
                 {technology.map((person, index) => (
-                  <button className="tech-btns" 
+                  <button className="tech-btns ff-serif" 
                     key={index} onClick={() =>
                       setIndex(index)}>{index+1}
                   </button>
@@ -27,7 +27,6 @@ export default function Technology() {
                 <p className="tech-description text-accent fs-500 ff-sans-cond flow letter-spacing-3">{description}</p>
               </div>
             </main>
-
           </section>
         </>
     )

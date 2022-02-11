@@ -1,5 +1,6 @@
 {
   "name": "space-tourism-website",
+  "author": "David Childerhose",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

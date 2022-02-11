@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
 
-
-/* ------------------- */
-/* Custom properties   */
-/* ------------------- */
+/* custom properties */
 
 :root {
     /* colors */
@@ -57,13 +54,7 @@
     }
 }
 
-
-/* ------------------- */
-/* Reset               */
-/* ------------------- */
-
-/* https://piccalil.li/blog/a-modern-css-reset/ */
-
+/* Reset */
 /* Box sizing */
 *,
 *::before,
@@ -122,28 +113,11 @@ select {
     font: inherit;
 }
 
-/* remove animations for people who've turned them off */
-@media (prefers-reduced-motion: reduce) {  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* Utility classes     */
+/* Utility classes */
 
 .flex {
     display: flex;
     gap: 1rem;
-}
-
-.grid {
-    display: grid;
-    gap:  1rem;
 }
 
 .display-block {
@@ -227,16 +201,15 @@ select {
     color: hsl( var(--clr-white) / .25);
 }
 
-
 /* Components */
 
 .large-button {
-    font-size: 2rem;
+    font-size: 1.8rem;
     position: relative;
     z-index: 1;
     display: inline-grid;
     place-items: center;
-    padding-inline: 2rem;
+    padding-inline: 1rem;
     border-radius: 50%;
     aspect-ratio: 1;
     text-decoration: none;
@@ -247,12 +220,12 @@ select {
     content: '';
     position: absolute;
     z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: hsl( var(--clr-white) / .1);
+    width: 110%;
+    height: 110%;
+    background: hsl( var(--clr-white) / .08);
     border-radius: 50%;
     opacity: 0;
-    transition: opacity 500ms linear, transform 750ms ease-in-out;
+    transition: opacity 1s linear, transform .75s ease-in-out;
 }
  
 .large-button:hover::after,
@@ -302,6 +275,9 @@ select {
 }
 
 @media (min-width: 700px) {
+    .large-button {
+        padding-inline: 2rem;
+    }
     .primary-navigation {
         padding-inline: clamp(5rem, 20vh, 10rem);
     }
@@ -466,6 +442,10 @@ select {
 
 /* crew */
 
+.crew {
+    height: 100vh;
+}
+
 .grid-container--crew {
     grid-template-areas: 
         'title'
@@ -567,7 +547,6 @@ select {
     }
     .crew-image {
         align-self: end;
-        margin: 0;
         border: none;
     }
     /* technology */
@@ -653,10 +632,24 @@ select {
     } 
 }
 
-
-/* manually extracted images */
+/* Images */
 
 /* destination images */
+/* planet animation */
+
+@media (prefers-reduced-motion: no-preference) {
+    .planet-image {
+      animation: planet-image-spin infinite 20s linear;
+    }
+  }
+  @keyframes planet-image-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 .planet-image[data='0'] {
     background: url('./components/assets/destination/image-moon.png') no-repeat center/cover;
 }
@@ -669,7 +662,6 @@ select {
 .planet-image[data='3'] {
     background: url('./components/assets/destination/image-titan.png') no-repeat center/cover;
 }
-
 /* crew images */
 .crew-image[data='0'] {
     background: url('./components/assets/crew/image-douglas-hurley.png') no-repeat center/contain;
@@ -691,9 +683,7 @@ select {
     width: 11.4rem;
     height: 12rem;
 }
-
 /* technology images */
-
 .tech-image[data='0'] {
     background: url('./components/assets/technology/image-launch-vehicle-landscape.jpg') no-repeat center/cover;
     width: 100%;
@@ -743,12 +733,11 @@ select {
         100% {
           transform: translateY(0);
         }
-    }
-      
+    } 
+    /* crew-images */
     .crew-image[data='0'] {
         width: 100%;
         height: 71vh;
-        
     }
     .crew-image[data='1'] {
         width: 100%;
@@ -781,12 +770,10 @@ select {
 }
 
 /* Background images */
-
 .home {
     background: url('./components/assets/home/background-home-mobile.jpg')  no-repeat center/cover;
     height: 100vh;
   }
-
 .destination {
     background: url('./components/assets/destination/background-destination-mobile.jpg') no-repeat center/cover;
     height: 100vh;
@@ -830,18 +817,4 @@ select {
     }
   }
 
-/* planet animation */
 
-@media (prefers-reduced-motion: no-preference) {
-    .planet-image {
-      animation: planet-image-spin infinite 20s linear;
-    }
-  }
-  @keyframes planet-image-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }

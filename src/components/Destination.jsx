@@ -15,8 +15,8 @@ export default function Destination() {
           <Nav />
             <main className='grid-container grid-container--destination flow'> 
                      
-                <h1 className='numbered-title numbered-title--destination'><span>01</span> Pick your destination</h1>
-                <div className='planet-image flow' data={index}></div>
+              <h1 className='numbered-title numbered-title--destination'><span>01</span> Pick your destination</h1>
+              <div className='planet-image flow' data={index}></div>
              
               <div className='tab-list underline-indicators flex'>
                 {destination.map((planet, index) => (
@@ -28,7 +28,6 @@ export default function Destination() {
                 ))}
               </div>
              
-
               <article className="destination-info">
                 <h2 className='fs-800 uppercase ff-serif flow'>{name}</h2>
                 <p className='text-accent fs-500 ff-sans-cond flow letter-spacing-3'>{description}</p>
@@ -43,8 +42,8 @@ export default function Destination() {
                     </div>
                 </div>
               </article>
-             </main> 
-           </section>
+            </main> 
+          </section>
         </>
     )
 }

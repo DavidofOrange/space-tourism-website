@@ -255,7 +255,7 @@ select {
 @supports (backdrop-filter: blur(1.5rem)) {
     .primary-navigation {
         background: hsl( var(--clr-white) / 0.5);
-        /* backdrop-filter: blur( 1.5rem ); */
+        backdrop-filter: blur( 1.5rem );
     }
 }
 

@@ -276,13 +276,13 @@ select {
 
 @media (min-width: 700px) {
     .large-button {
-        padding-inline: 2rem;
+        padding: 0 2rem;
         font-size: 1rem;
         width: 9rem;
         height: 9rem;
     }
     .primary-navigation {
-        padding-inline: clamp(5rem, 20vh, 10rem);
+        padding: 0 clamp(5rem, 20vh, 10rem);
     }
     .flow {
         margin-top: 1rem;
@@ -343,8 +343,8 @@ select {
         background: transparent;
         background: url(./components/assets/shared/icon-hamburger.svg) no-repeat;
         border: 0;
-        width: 1.5rem;
-        aspect-ratio: 1;
+        width: 2rem;
+        height: 2rem;
     }
     #nav-menu[aria-expanded='true'] {
         background: url(./components/assets/shared/icon-close.svg) no-repeat;
@@ -436,8 +436,7 @@ select {
     text-align: center;
     display: grid;
     place-items: center;
-    padding-inline: 1rem;
-   
+    padding: 0 1rem;
 }
 
 .grid-container p:not([className]) {
@@ -520,7 +519,7 @@ select {
 
 .tech-info {
     grid-area: content;
-    padding-inline: 1rem;
+    padding: 0 1rem;
 }
 
 @media (min-width: 700px) {

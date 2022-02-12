@@ -11,7 +11,7 @@ export default function Technology() {
           <section className="tech">
             <Nav />
             <main className="grid-container--tech"> 
-              <h1 className="numbered-title"><span>03</span> SPACE LAUNCH 101</h1>
+              <h1 className="numbered-title numbered-title--tech"><span>03</span> SPACE LAUNCH 101</h1>
               <div className="tech-image flow" data={index}></div> 
               <div className="btns-container flow">
                 {technology.map((person, index) => (

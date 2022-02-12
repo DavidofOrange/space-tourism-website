@@ -12,7 +12,7 @@ export default function Home() {
             <div>
               <h1 className='numbered-title text-accent ff-sans-cond uppercase letter-spacing-3 flow'>
                 So, you want to travel to</h1>
-              <h1 className='text-accent fs-900 uppercase ff-serif text-white flow'>Space</h1>
+              <h1 className='text-accent fs-900 uppercase ff-serif text-white flow letter-spacing-1'>Space</h1>
               <p className='text-accent fs-500 ff-sans-cond flow letter-spacing-3'>
                  Let’s face it; if you want to go to space, you might as well genuinely go to 
                  outer space and not hover kind of on the edge of it. Well sit back, and relax 

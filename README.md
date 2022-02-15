@@ -1,6 +1,6 @@
 Live hosted site:
 
-https://david-space-tourism-website.netlify.app/technology
+https://david-space-tourism-website.netlify.app
 
 # Getting Started with Create React App
 

@@ -3,7 +3,6 @@ import '../index.css';
 import { React, useState } from 'react';
 import data from './data.js';
 
-
 export default function Destination() {
   const [destination] = useState(data.destinations);
   const [index, setIndex] = useState(0);
@@ -13,11 +12,9 @@ export default function Destination() {
         <>
           <section className='destination'>
           <Nav />
-            <main className='grid-container grid-container--destination flow'> 
-                     
+            <main className='grid-container grid-container--destination flow'>      
               <h1 className='numbered-title numbered-title--destination'><span>01</span> Pick your destination</h1>
               <div className='planet-image flow' data={index}></div>
-             
               <div className='tab-list underline-indicators flex'>
                 {destination.map((planet, index) => (
                   <button className='transparent uppercase ff-sans-cond text-accent letter-spacing-2' 

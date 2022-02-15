@@ -17,9 +17,7 @@ export default function Crew() {
               <h3 className="fs-700 flow uppercase">{name}</h3>
               <p className="text-accent fs-500 ff-sans-cond flow letter-spacing-3">{bio}</p>
             </article>
-
             <div className="crew-image flow" data={index}></div>
-        
             <div className="dot-indicators flex flow">
               {crew.map((person, index) => (
                 <button
@@ -28,7 +26,6 @@ export default function Crew() {
                 </button>
               ))}
             </div>
-
           </main>
         </section>
         </>

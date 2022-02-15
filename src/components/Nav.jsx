@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import '../index.css';
 import logo from './assets/shared/logo.svg';
 
-
 function Nav() {
 
   const handleClick = () => {
@@ -41,5 +40,4 @@ function Nav() {
       </>
     );
 };
-
 export default Nav;
